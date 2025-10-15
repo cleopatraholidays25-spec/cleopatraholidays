@@ -27,8 +27,8 @@ export const I18nProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     const fetchTranslations = async () => {
       try {
         const [enResponse, arResponse] = await Promise.all([
-          fetch('./locales/en.json'),
-          fetch('./locales/ar.json')
+          fetch('/locales/en.json'),
+          fetch('/locales/ar.json')
         ]);
         if (!enResponse.ok || !arResponse.ok) {
           throw new Error(`Failed to load translation files: ${enResponse.statusText}, ${arResponse.statusText}`);
