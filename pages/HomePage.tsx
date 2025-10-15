@@ -3,8 +3,6 @@ import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useI18n } from '../hooks/useI18n';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
-import ar from '../locales/ar.json';
-import en from '../locales/en.json';
 import QuoteIcon from '../components/icons/QuoteIcon';
 import ServiceCard from '../components/ServiceCard';
 import AirplaneIcon from '../components/icons/AirplaneIcon';
@@ -14,10 +12,6 @@ import LicenseIcon from '../components/icons/LicenseIcon';
 import CarIcon from '../components/icons/CarIcon';
 import TransferIcon from '../components/icons/TransferIcon';
 
-const languages = {
-    ar,
-    en
-};
 const allServices: { [key: string]: React.ReactElement } = {
     flights: <AirplaneIcon />,
     hotels: <HotelIcon />,
