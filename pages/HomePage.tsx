@@ -71,16 +71,96 @@ const HomePage: React.FC = () => {
     }
   }, []);
 
-  const headingFont = language === 'ar' ? 'font-serif-ar' : 'font-serif-en';
-  const bodyFont = language === 'ar' ? 'font-sans-ar' : 'font-sans-en';
+  // const headingFont = language === 'ar' ? 'font-serif-ar' : 'font-serif-en';
+  // const bodyFont = language === 'ar' ? 'font-sans-ar' : 'font-sans-en';
 
-  const allServiceKeys = Object.keys(allServices);
+  // Hardcoded content for both languages
+  const content = {
+    en: {
+      hero: {
+        tagline1: "CLEOPATRA HOLIDAYS",
+        tagline2: "\"Discover the World with Prestige\"",
+        contact_cta: "Contact Us",
+        learn_more_cta: "Learn More About Us"
+      },
+      services: {
+        title: "Our Services",
+        teaser: "Explore our comprehensive suite of bespoke travel services, designed to deliver an unparalleled luxury experience from start to finish.",
+        explore_all: "Explore All Services",
+        items: {
+          flights: { title: "Flights", desc: "Seamless booking for commercial first-class and business-class travel." },
+          hotels: { title: "Hotels & Resorts", desc: "Handpicked selection of the world's most luxurious accommodations." },
+          travel_insurance: { title: "Travel Insurance", desc: "Comprehensive coverage for peace of mind throughout your journey." },
+          driving_license: { title: "International Driving License", desc: "Assistance with all the necessary documentation for driving abroad." },
+          car_rental: { title: "Car Rental", desc: "Access to a fleet of vehicles for your travel needs." },
+          transfers: { title: "Airport Transfers", desc: "Reliable and luxurious pickup and drop-off services." }
+        }
+      },
+      testimonials: {
+        title: "Voices of Our Travelers",
+        list: [
+          {
+            quote: "An absolutely unforgettable experience. The attention to detail was impeccable. Cleopatra Holidays crafted a journey that exceeded all our dreams.",
+            author: "John & Jane Doe",
+            trip: "Journey to the Nile"
+          },
+          {
+            quote: "From private jets to exclusive access to historical sites, every moment felt like a scene from a movie. True luxury and professionalism.",
+            author: "Aisha Al-Farsi",
+            trip: "European Grand Tour"
+          },
+          {
+            quote: "The team's expertise and passion for travel shine through in everything they do. We felt completely cared for. Highly recommended.",
+            author: "David Chen",
+            trip: "Secrets of Japan"
+          }
+        ]
+      }
+    },
+    ar: {
+      hero: {
+        tagline1: "كـلـــيـــوبـــاتـــرا   لــلــــعـــــطــــلات",
+        tagline2: "\"اكتشف العالم برفاهية\"",
+        contact_cta: "اتصل بنا",
+        learn_more_cta: "اعرف المزيد عنا"
+      },
+      services: {
+        title: "خدماتنا",
+        teaser: "اكتشف مجموعتنا الشاملة من خدمات السفر المخصصة، المصممة لتقديم تجربة فاخرة لا مثيل لها من البداية إلى النهاية.",
+        explore_all: "اكتشف كل الخدمات",
+        items: {
+          flights: { title: "رحلات الطيران", desc: "حجوزات سلسة للدرجة الأولى ودرجة رجال الأعمال على الطيران التجاري." },
+          hotels: { title: "الفنادق والمنتجعات", desc: "مجموعة مختارة بعناية من أفخم أماكن الإقامة في العالم." },
+          travel_insurance: { title: "تأمين السفر", desc: "تغطية شاملة لراحة البال طوال رحلتك." },
+          driving_license: { title: "رخصة القيادة الدولية", desc: "المساعدة في جميع الوثائق اللازمة للقيادة في الخارج." },
+          car_rental: { title: "تأجير السيارات", desc: "الوصول إلى أسطول من المركبات لتلبية احتياجات سفرك." },
+          transfers: { title: "التنقلات من وإلى المطار", desc: "خدمات استقبال وتوصيل فاخرة وموثوقة." }
+        }
+      },
+      testimonials: {
+        title: "أصداء من رحلات عملائنا",
+        list: [
+          {
+            quote: "تجربة لا تُنسى على الإطلاق. كان الاهتمام بالتفاصيل مذهلاً. صممت كليوباترا هوليدايز رحلة فاقت كل أحلامنا.",
+            author: "جون وجين دو",
+            trip: "رحلة إلى النيل"
+          },
+          {
+            quote: "من الطائرات الخاصة إلى الدخول الحصري للمواقع التاريخية، كل لحظة كانت وكأنها مشهد من فيلم. فخامة واحترافية حقيقية.",
+            author: "عائشة الفارسي",
+            trip: "الجولة الأوروبية الكبرى"
+          },
+          {
+            quote: "خبرة الفريق وشغفهم بالسفر يظهران في كل ما يفعلونه. شعرنا بالاهتمام الكامل. نوصي بهم بشدة.",
+            author: "ديفيد تشين",
+            trip: "أسرار اليابان"
+          }
+        ]
+      }
+    }
+  };
 
-  const testimonials = [
-      { key: 't1', quote: t('home.testimonials.t1_quote'), author: t('home.testimonials.t1_author'), trip: t('home.testimonials.t1_trip') },
-      { key: 't2', quote: t('home.testimonials.t2_quote'), author: t('home.testimonials.t2_author'), trip: t('home.testimonials.t2_trip') },
-      { key: 't3', quote: t('home.testimonials.t3_quote'), author: t('home.testimonials.t3_author'), trip: t('home.testimonials.t3_trip') },
-  ];
+  const currentContent = content[language] || content.en;
   
   return (
     <>
@@ -104,13 +184,13 @@ const HomePage: React.FC = () => {
         </div>
         
         <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className={`relative z-10 text-center p-6 ${bodyFont}`}>
+        <div className={`relative z-10 text-center p-6 ${language === 'ar' ? 'font-sans-ar' : 'font-sans-en'}`}>
           <h1
-            className={`text-4xl md:text-6xl font-bold mb-4 ${headingFont} transition-all duration-1000 ease-out flex flex-col ${isHeroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+            className={`text-4xl md:text-6xl font-bold mb-4 ${language === 'ar' ? 'font-serif-ar' : 'font-serif-en'} transition-all duration-1000 ease-out flex flex-col ${isHeroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             style={{ transitionDelay: '100ms' }}
           >
-            <span style={{textShadow: '2px 2px 0px #000000, -2px -2px 0px #000000, 2px -2px 0px #000000, -2px 2px 0px #000000'}}>{t('hero.tagline1')}</span>
-            <span style={{textShadow: '2px 2px 0px #000000, -2px -2px 0px #000000, 2px -2px 0px #000000, -2px 2px 0px #000000'}}>{t('hero.tagline2')}</span>
+            <span style={{textShadow: '2px 2px 0px #000000, -2px -2px 0px #000000, 2px -2px 0px #000000, -2px 2px 0px #000000'}}>{currentContent.hero.tagline1}</span>
+            <span style={{textShadow: '2px 2px 0px #000000, -2px -2px 0px #000000, 2px -2px 0px #000000, -2px 2px 0px #000000'}}>{currentContent.hero.tagline2}</span>
           </h1>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
             <Link
@@ -118,26 +198,26 @@ const HomePage: React.FC = () => {
               className={`px-8 py-3 bg-gold text-navy font-bold rounded-md shadow-lg transform transition-all duration-700 ease-out hover:scale-105 hover:bg-yellow-500 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-75 ${isHeroLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
               style={{ transitionDelay: '300ms' }}
             >
-              {t('hero.contact_cta')}
+              {currentContent.hero.contact_cta}
             </Link>
             <Link
               to="/about-us"
               className={`px-8 py-3 bg-transparent border-2 border-white text-white font-bold rounded-md shadow-lg transform transition-all duration-700 ease-out hover:scale-105 hover:bg-white hover:text-navy focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-75 ${isHeroLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
               style={{ transitionDelay: '500ms' }}
             >
-              {t('hero.learn_more_cta')}
+              {currentContent.hero.learn_more_cta}
             </Link>
           </div>
         </div>
       </div>
 
       {/* Services Section */}
-      <section ref={servicesRef} className={`py-16 md:py-24 bg-white dark:bg-navy ${bodyFont} overflow-hidden`}>
+      <section ref={servicesRef} className={`py-16 md:py-24 bg-white dark:bg-navy ${language === 'ar' ? 'font-sans-ar' : 'font-sans-en'} overflow-hidden`}>
         <div className="container mx-auto px-6 text-center">
           <div className={`transition-all duration-700 ease-out ${isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h2 className={`text-3xl md:text-4xl font-bold text-gold mb-4 ${headingFont}`}>{t('services.title')}</h2>
+            <h2 className={`text-3xl md:text-4xl font-bold text-gold mb-4 ${language === 'ar' ? 'font-serif-ar' : 'font-serif-en'}`}>{currentContent.services.title}</h2>
             <p className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300 mb-12">
-              {t('services.teaser')}
+              {currentContent.services.teaser}
             </p>
           </div>
 
@@ -147,12 +227,12 @@ const HomePage: React.FC = () => {
              <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white dark:from-navy to-transparent pointer-events-none z-10" />
              <div className="overflow-hidden">
                 <div className="flex w-max animate-marquee rtl:animate-marquee-rtl group-hover:[animation-play-state:paused]">
-                    {[...allServiceKeys, ...allServiceKeys].map((key, index) => (
+                    {Object.keys(allServices).map((key, index) => (
                         <div key={`${key}-${index}`} className="flex-shrink-0 w-80 md:w-96 px-4">
                             <ServiceCard
                                 icon={allServices[key]}
-                                title={t(`services.${key}.title`)}
-                                description={t(`services.${key}.desc`)}
+                                title={currentContent.services.items[key]?.title || key}
+                                description={currentContent.services.items[key]?.desc || ''}
                             />
                         </div>
                     ))}
@@ -169,18 +249,18 @@ const HomePage: React.FC = () => {
               to="/services"
               className="inline-block px-8 py-3 bg-transparent border-2 border-gold text-gold font-bold rounded-md shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-gold hover:text-navy dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-75"
             >
-              {t('services.explore_all')}
+              {currentContent.services.explore_all}
             </Link>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section ref={testimonialsRef} className={`py-16 md:py-24 bg-gray-50 dark:bg-gray-900 ${bodyFont}`}>
+      <section ref={testimonialsRef} className={`py-16 md:py-24 bg-gray-50 dark:bg-gray-900 ${language === 'ar' ? 'font-sans-ar' : 'font-sans-en'}`}>
           <div className="container mx-auto px-6 text-center">
-              <h2 className={`text-3xl md:text-4xl font-bold text-gold mb-12 ${headingFont} transition-all duration-700 ease-out ${isTestimonialsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{t('home.testimonials.title')}</h2>
+              <h2 className={`text-3xl md:text-4xl font-bold text-gold mb-12 ${language === 'ar' ? 'font-serif-ar' : 'font-serif-en'} transition-all duration-700 ease-out ${isTestimonialsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{currentContent.testimonials.title}</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {testimonials.map((testimonial, index) => (
+                  {currentContent.testimonials.list.map((testimonial, index) => (
                       <div
                           key={testimonial.key}
                           className={`transition-all duration-500 ease-out ${isTestimonialsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
