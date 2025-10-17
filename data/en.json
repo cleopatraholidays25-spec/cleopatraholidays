@@ -1,0 +1,416 @@
+
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "destinations": "Destinations",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "quick_links": "Quick Links"
+  },
+  "hero": {
+    "tagline1": "CLEOPATRA HOLIDAYS",
+    "tagline2": "“Discover the World with Prestige”",
+    "contact_cta": "Contact Us",
+    "learn_more_cta": "Learn More About Us"
+  },
+  "home": {
+    "testimonials": {
+      "title": "Voices of Our Travelers",
+      "t1_quote": "An absolutely unforgettable experience. The attention to detail was impeccable. Cleopatra Holidays crafted a journey that exceeded all our dreams.",
+      "t1_author": "John & Jane Doe",
+      "t1_trip": "Journey to the Nile",
+      "t2_quote": "From private jets to exclusive access to historical sites, every moment felt like a scene from a movie. True luxury and professionalism.",
+      "t2_author": "Aisha Al-Farsi",
+      "t2_trip": "European Grand Tour",
+      "t3_quote": "The team's expertise and passion for travel shine through in everything they do. We felt completely cared for. Highly recommended.",
+      "t3_author": "David Chen",
+      "t3_trip": "Secrets of Japan"
+    },
+    "blog": {
+      "title": "From Our Travel Journal",
+      "view_all": "View All Posts",
+      "read_more": "Read More"
+    }
+  },
+  "about": {
+    "title": "Our Story",
+    "paragraph1": "Cleopatra Holidays was founded on the principle that travel should be more than just a journey; it should be a masterpiece of experiences. We are purveyors of fine travel, crafting bespoke itineraries that embody luxury, exclusivity, and profound discovery.",
+    "subtitle": "Why Choose Us?",
+    "reason1": "Unmatched Prestige: Every detail is curated to reflect the highest standards of luxury.",
+    "reason2": "Total Exclusivity: Access to private tours, unique accommodations, and experiences unavailable to the public.",
+    "reason3": "Absolute Trust: Our dedicated team ensures a seamless and secure journey from start to finish."
+  },
+  "services": {
+    "title": "Our Services",
+    "teaser": "Explore our comprehensive suite of bespoke travel services, designed to deliver an unparalleled luxury experience from start to finish.",
+    "explore_all": "Explore All Services",
+    "flights": {
+      "title": "Flights",
+      "desc": "Seamless booking for commercial first-class and business-class travel."
+    },
+    "hotels": {
+      "title": "Hotels & Resorts",
+      "desc": "Handpicked selection of the world's most luxurious accommodations."
+    },
+    "travel_insurance": {
+      "title": "Travel Insurance",
+      "desc": "Comprehensive coverage for peace of mind throughout your journey."
+    },
+    "driving_license": {
+      "title": "International Driving License",
+      "desc": "Assistance with all the necessary documentation for driving abroad."
+    },
+    "car_rental": {
+      "title": "Car Rental",
+      "desc": "Access to a fleet of vehicles for your travel needs."
+    },
+    "transfers": {
+      "title": "Airport Transfers",
+      "desc": "Reliable and luxurious pickup and drop-off services."
+    }
+  },
+  "destinations_page": {
+    "title": "Our Curated Destinations",
+    "subtitle": "Embark on a journey to the world's most exquisite locations, each selected for its unique charm and potential for unforgettable experiences.",
+    "categories": {
+      "all": "All",
+      "relaxation": "Relaxation",
+      "adventure": "Adventure",
+      "cultural": "Cultural"
+    },
+    "back_to_destinations": "Back to All Destinations",
+    "gallery_title": "Gallery",
+    "packages_title": "Signature Experiences",
+    "not_found": "Destination not found.",
+    "starting_from": "From",
+    "whats_included": "What's Included",
+    "filter_by_price": "Filter by Price",
+    "filter_by_nights": "Filter by Nights",
+    "nights_duration": "{count} Nights",
+    "price_ranges": {
+      "any": "Any Price",
+      "under_15k": "Under QAR 15,000",
+      "15k_to_25k": "QAR 15,000 - 25,000",
+      "over_25k": "Over QAR 25,000"
+    },
+    "nights_ranges": {
+      "any": "Any Duration",
+      "short": "5-7 Nights",
+      "medium": "8-12 Nights",
+      "long": "13+ Nights"
+    },
+    "included_items": {
+      "flights": "First-Class Roundtrip Flights",
+      "hotel_5_star": "5-Star Luxury Accommodation",
+      "private_tours": "Private Guided Tours",
+      "transfers": "All Airport & Activity Transfers",
+      "daily_breakfast": "Daily Gourmet Breakfast",
+      "exclusive_access": "Exclusive Site Access",
+      "safari_drives": "Private Safari Game Drives"
+    },
+    "santorini": {
+      "title": "Santorini, Greece",
+      "description": "Iconic sunsets and whitewashed villages.",
+      "long_description": "Perched on the edge of a submerged volcano, Santorini is a masterpiece of nature's drama. Its whitewashed villages cling to towering cliffs, offering breathtaking views of the Aegean Sea. A destination for romantics and dreamers, it promises iconic sunsets, unique black sand beaches, and a taste of ancient history in the ruins of Akrotiri.",
+      "package1_title": "Sunset Catamaran Cruise",
+      "package1_desc": "Sail the caldera, swim in volcanic hot springs, and witness the world-famous Oia sunset from the sea.",
+      "package1_price": "From $1,200 pp",
+      "package2_title": "Private Wine Tasting",
+      "package2_desc": "Explore ancient vineyards and sample the unique Assyrtiko grape with a guided tour of the island's finest wineries.",
+      "package2_price": "From $850 pp"
+    },
+    "kyoto": {
+      "title": "Kyoto, Japan",
+      "description": "Ancient temples and serene gardens.",
+      "long_description": "The former imperial capital of Japan, Kyoto is a city where history comes alive. Wander through bamboo groves, marvel at golden temples, and witness the delicate art of the geisha in the Gion district. Kyoto offers a profound sense of tranquility and a deep connection to Japanese culture and tradition.",
+      "package1_title": "Traditional Tea Ceremony",
+      "package1_desc": "Participate in a private, authentic tea ceremony with a tea master in a historic teahouse.",
+      "package1_price": "From $500 pp",
+      "package2_title": "Kinkaku-ji Golden Pavilion Tour",
+      "package2_desc": "Experience an exclusive early-morning visit to the stunning Golden Pavilion before the crowds arrive.",
+      "package2_price": "From $700 pp"
+    },
+    "queenstown": {
+      "title": "Queenstown, New Zealand",
+      "description": "The adventure capital of the world.",
+      "long_description": "Nestled on the shores of Lake Wakatipu and surrounded by the dramatic Southern Alps, Queenstown is a haven for thrill-seekers and nature lovers alike. From bungee jumping to jet boating, the adrenaline is matched only by the breathtaking beauty of the landscapes.",
+      "package1_title": "Helicopter Tour to Milford Sound",
+      "package1_desc": "Soar over pristine fjords and land on a glacier in this unforgettable aerial journey to a natural wonder.",
+      "package1_price": "From $2,500 pp",
+      "package2_title": "Private Vineyard Tour",
+      "package2_desc": "Discover the world-renowned Pinot Noir of the Central Otago region with exclusive tastings at boutique wineries.",
+      "package2_price": "From $900 pp"
+    },
+    "cairo": {
+      "title": "Cairo, Egypt",
+      "description": "A journey through millennia of history.",
+      "long_description": "Cairo is a vibrant, sprawling metropolis where the ancient and the modern coexist. Stand in awe of the Great Pyramids of Giza, discover the treasures of Tutankhamun in the Egyptian Museum, and lose yourself in the bustling labyrinth of the Khan el-Khalili bazaar. It's a city that pulses with energy and history.",
+      "package1_title": "Private Guide at the Pyramids",
+      "package1_desc": "Explore the Giza Plateau, including special access to areas closed to the public, with a world-class Egyptologist.",
+      "package1_price": "From $1,500 pp",
+      "package2_title": "Luxury Nile Dinner Cruise",
+      "package2_desc": "Enjoy gourmet cuisine and traditional entertainment as you sail down the majestic Nile River by night.",
+      "package2_price": "From $600 pp"
+    },
+    "bali": {
+      "title": "Bali, Indonesia",
+      "description": "An island of spiritual tranquility.",
+      "long_description": "Known as the 'Island of the Gods,' Bali is a lush paradise of terraced rice paddies, spiritual temples, and volcanic mountains. Whether you're seeking inner peace through yoga in Ubud, surfing the waves of Canggu, or relaxing in a luxury Seminyak villa, Bali's enchanting spirit is sure to captivate you.",
+      "package1_title": "Sunrise Volcano Hike",
+      "package1_desc": "Embark on a guided trek up Mount Batur to watch a spectacular sunrise from above the clouds.",
+      "package1_price": "From $450 pp",
+      "package2_title": "Holistic Spa & Wellness Retreat",
+      "package2_desc": "Indulge in a full day of traditional Balinese spa treatments, meditation, and yoga for complete rejuvenation.",
+      "package2_price": "From $1,100 pp"
+    },
+    "swiss_alps": {
+      "title": "Swiss Alps, Switzerland",
+      "description": "Majestic peaks and pristine slopes.",
+      "long_description": "The Swiss Alps are a playground of epic proportions. In winter, they offer world-class skiing and snowboarding, while summer reveals lush green valleys perfect for hiking and mountaineering. From the glamour of St. Moritz to the charm of Zermatt, the Alps promise pristine nature and unparalleled luxury.",
+      "package1_title": "Matterhorn Glacier Paradise",
+      "package1_desc": "Ascend to Europe's highest cable car station for breathtaking panoramic views of the iconic Matterhorn and surrounding peaks.",
+      "package1_price": "From $1,800 pp",
+      "package2_title": "Luxury Chocolate & Cheese Tour",
+      "package2_desc": "Travel by private car through picturesque villages to taste the finest artisanal Swiss chocolates and cheeses.",
+      "package2_price": "From $950 pp"
+    },
+    "marrakech": {
+      "title": "Marrakech, Morocco",
+      "description": "A city of vibrant souks and serene riads.",
+      "long_description": "Marrakech is a sensory explosion, a city of vibrant colors, sounds, and scents. Lose yourself in the labyrinthine alleys of the Medina, bargain for treasures in the bustling souks, and find tranquility in the hidden courtyards of a traditional riad. From the Djemaa el-Fna square's lively spectacle to the peaceful Jardin Majorelle, Marrakech is a captivating blend of ancient tradition and modern energy.",
+      "package1_title": "Private Souk & Medina Tour",
+      "package1_desc": "Navigate the bustling markets with a personal guide, discovering hidden artisan workshops and the best local crafts.",
+      "package1_price": "From $400 pp",
+      "package2_title": "Luxury Hammam & Spa Experience",
+      "package2_desc": "Rejuvenate your senses with a traditional Moroccan hammam steam bath, exfoliation, and a relaxing argan oil massage.",
+      "package2_price": "From $700 pp"
+    },
+    "bora_bora": {
+      "title": "Bora Bora, French Polynesia",
+      "description": "Overwater bungalows on turquoise lagoons.",
+      "long_description": "Bora Bora is the definition of a tropical paradise. Its iconic overwater bungalows sit above a crystal-clear turquoise lagoon, with the majestic Mount Otemanu rising in the center. It is the ultimate destination for romance and relaxation, offering unparalleled serenity, world-class diving with sharks and rays, and sunsets that paint the sky in fiery hues.",
+      "package1_title": "Shark & Ray Snorkel Safari",
+      "package1_desc": "Swim alongside blacktip reef sharks and graceful stingrays in the warm, shallow waters of the lagoon with an expert guide.",
+      "package1_price": "From $900 pp",
+      "package2_title": "Private Motu Picnic",
+      "package2_desc": "Escape to a secluded islet (motu) for a gourmet picnic on a pristine white sand beach, completely surrounded by paradise.",
+      "package2_price": "From $1,300 pp"
+    },
+    "serengeti": {
+      "title": "Serengeti, Tanzania",
+      "description": "Witness the great wildebeest migration.",
+      "long_description": "The Serengeti is Africa's grandest stage, a vast, endless plain teeming with wildlife. It is home to the Great Migration, one of the most awe-inspiring natural spectacles on Earth, as millions of wildebeest and zebra traverse the plains. Experience thrilling game drives, stay in luxurious safari lodges, and feel the raw, untamed spirit of the African wilderness.",
+      "package1_title": "Great Migration Safari Drive",
+      "package1_desc": "Track the massive herds with an expert ranger, positioning you for dramatic river crossings and predator encounters.",
+      "package1_price": "From $3,000 pp",
+      "package2_title": "Hot Air Balloon over the Plains",
+      "package2_desc": "Drift silently over the Serengeti at sunrise, watching the wildlife below, followed by a champagne breakfast in the bush.",
+      "package2_price": "From $1,500 pp"
+    },
+    "venice": {
+      "title": "Venice, Italy",
+      "description": "A timeless city of canals and romance.",
+      "long_description": "Venice is a city unlike any other, a floating masterpiece of art, history, and architecture. Built on water, its canals are its streets, and gondolas its taxis. Explore the grandeur of St. Mark's Square, wander across romantic bridges, and get lost in a maze of narrow alleyways that reveal hidden piazzas and centuries-old secrets. Venice is a timeless dream.",
+      "package1_title": "Private Gondola Serenade",
+      "package1_desc": "Glide through the enchanting back canals of Venice on a private gondola, accompanied by a traditional musician.",
+      "package1_price": "From $550 pp",
+      "package2_title": "Murano & Burano Glass Tour",
+      "package2_desc": "Visit the famous islands by private water taxi to witness masterful glassblowing in Murano and see the colorful houses of Burano.",
+      "package2_price": "From $800 pp"
+    },
+    "dubai": {
+      "title": "Dubai, UAE",
+      "description": "Futuristic skylines and desert luxury.",
+      "long_description": "Dubai is a dazzling metropolis that rises from the desert, a testament to ambition and innovation. Experience the world's tallest building, the Burj Khalifa, indulge in world-class shopping at the Dubai Mall, and find adventure on a desert safari. From sun-drenched beaches to opulent hotels, Dubai offers a unique blend of futuristic vision and Arabian heritage.",
+      "package1_title": "Burj Khalifa At The Top SKY",
+      "package1_desc": "Ascend to the highest observation decks in the world for unparalleled views of the city, desert, and ocean.",
+      "package1_price": "From $400 pp",
+      "package2_title": "Private Desert Safari & Dinner",
+      "package2_desc": "Traverse the golden dunes in a luxury 4x4, followed by a gourmet dinner under the stars at a private Bedouin-style camp.",
+      "package2_price": "From $800 pp"
+    },
+    "muscat": {
+      "title": "Muscat, Oman",
+      "description": "Where mountains meet the sea.",
+      "long_description": "Nestled between dramatic mountains and the serene Gulf of Oman, Muscat is a city of understated elegance and rich history. Explore the magnificent Sultan Qaboos Grand Mosque, wander through the fragrant Mutrah Souq, and discover hidden coves by private dhow. Oman's capital offers an authentic Arabian experience, blending ancient traditions with modern sophistication.",
+      "package1_title": "Dolphin Watching & Coastal Cruise",
+      "package1_desc": "Set sail on a private yacht to witness playful dolphins in their natural habitat along Oman's stunning coastline.",
+      "package1_price": "From $650 pp",
+      "package2_title": "Wadi Shab & Bimmah Sinkhole Tour",
+      "package2_desc": "Embark on an exclusive 4x4 journey to the breathtaking natural pools of Wadi Shab and the turquoise waters of the Bimmah Sinkhole.",
+      "package2_price": "From $900 pp"
+    },
+    "riyadh": {
+      "title": "Riyadh, Saudi Arabia",
+      "description": "The heart of modern Arabia.",
+      "long_description": "Riyadh, the capital of Saudi Arabia, is a city undergoing a remarkable transformation, blending deep-rooted heritage with a bold, futuristic vision. Explore the historic Al-Masmak Fortress, marvel at the modern Kingdom Centre, and discover the UNESCO World Heritage site of Diriyah, the birthplace of the Saudi state. Riyadh is a dynamic hub of culture, commerce, and history.",
+      "package1_title": "Edge of the World Excursion",
+      "package1_desc": "Take a private guided trip to the spectacular cliffs of Jebel Fihrayn, offering dramatic views over the ancient desert landscape.",
+      "package1_price": "From $750 pp",
+      "package2_title": "Private Tour of Historic Diriyah",
+      "package2_desc": "Discover the mud-brick palaces and heritage of the At-Turaif District with a personal historian and guide.",
+      "package2_price": "From $600 pp"
+    },
+    "damascus": {
+      "title": "Damascus, Syria",
+      "description": "Echoes of ancient civilizations.",
+      "long_description": "As one of the oldest continuously inhabited cities in the world, Damascus is a treasure trove of history. Its ancient city walls enclose a labyrinth of souqs, mosques, and courtyards that have witnessed the rise and fall of empires. A journey here is a profound exploration of human history, from the magnificent Umayyad Mosque to the historic Straight Street mentioned in the Bible. It is a city of resilience and enduring cultural significance.",
+      "package1_title": "The Old City Historical Walk",
+      "package1_desc": "A guided tour with a local historian through the UNESCO-listed Old City, exploring its most significant religious and cultural sites.",
+      "package1_price": "From $300 pp",
+      "package2_title": "Artisan Workshops of the Souq",
+      "package2_desc": "A curated visit to the workshops of master artisans, observing the ancient crafts of brocade weaving and mosaic inlay.",
+      "package2_price": "From $450 pp"
+    },
+    "berlin": {
+      "title": "Berlin, Germany",
+      "description": "A city of history, art, and reinvention.",
+      "long_description": "Berlin is a city defined by its tumultuous history and vibrant spirit of creativity. From the remnants of the Berlin Wall to the grandeur of the Brandenburg Gate, every corner tells a story. Today, it is a global hub for art, music, and contemporary culture, boasting world-class museums, an innovative culinary scene, and an undeniable energy. It's a city that constantly reinvents itself while never forgetting its past.",
+      "package1_title": "Private Cold War History Tour",
+      "package1_desc": "Explore iconic sites like Checkpoint Charlie and the East Side Gallery with a private historian in a classic Trabant car.",
+      "package1_price": "From QAR700 pp",
+      "package2_title": "Museum Island VIP Access",
+      "package2_desc": "Enjoy an exclusive, after-hours tour of the Pergamon Museum or the Neues Museum, home to the bust of Nefertiti.",
+      "package2_price": "From QAR900 pp"
+    },
+    "new_york": {
+      "title": "New York, USA",
+      "description": "The iconic, ever-beating heart of the world.",
+      "long_description": "New York City is a global icon, a vertical metropolis of endless energy and ambition. From the bright lights of Times Square to the tranquil paths of Central Park, the city offers a universe of experiences. Take in a Broadway show, explore world-renowned museums like The Met and MoMA, and discover diverse culinary landscapes in its distinct neighborhoods. The 'city that never sleeps' is a destination of dreams.",
+      "package1_title": "Private Helicopter Tour of Manhattan",
+      "package1_desc": "Soar above the iconic skyline for breathtaking aerial views of the Statue of Liberty, Empire State Building, and more.",
+      "package1_price": "From $1,500 pp",
+      "package2_title": "Exclusive Broadway Experience",
+      "package2_desc": "Enjoy premium seats for a hit Broadway show, complete with a private backstage tour and a meet-and-greet with cast members.",
+      "package2_price": "From $1,200 pp"
+    },
+    "london": {
+      "title": "London, UK",
+      "description": "Where royal history meets modern flair.",
+      "long_description": "London is a city where centuries of history and royal pageantry coexist with a cutting-edge world of fashion, art, and cuisine. Witness the Changing of the Guard at Buckingham Palace, explore the ancient Tower of London, and enjoy panoramic views from the London Eye. From West End theatres to Notting Hill's charming streets, London is a timeless and dynamic capital.",
+      "package1_title": "Private Viewing of the Crown Jewels",
+      "package1_desc": "Experience an exclusive, crowd-free viewing of the Crown Jewels at the Tower of London with a Yeoman Warder guide.",
+      "package1_price": "From $1,100 pp",
+      "package2_title": "Thames Luxury River Cruise",
+      "package2_desc": "Enjoy a gourmet dinner and champagne as you cruise down the River Thames at twilight, passing by London's illuminated landmarks.",
+      "package2_price": "From $850 pp"
+    },
+    "machu_picchu": {
+      "title": "Machu Picchu, Peru",
+      "description": "The lost city of the Incas.",
+      "long_description": "Perched high in the Andes Mountains, the enigmatic citadel of Machu Picchu is one of the world's most breathtaking sights. This 'lost city of the Incas' is a masterpiece of architecture and a sacred place of profound energy. Arrive in style aboard a luxury train and explore the ancient stone temples, terraces, and astronomical observatories that make this UNESCO World Heritage site an unforgettable journey into the past.",
+      "package1_title": "Luxury Belmond Hiram Bingham Train",
+      "package1_desc": "Travel to Machu Picchu in 1920s style, with gourmet dining, live music, and exclusive access to the citadel.",
+      "package1_price": "From $2,800 pp",
+      "package2_title": "Private Sunrise Tour",
+      "package2_desc": "Enter the site before the crowds with a private guide to witness the first rays of sun illuminate the ancient stones.",
+      "package2_price": "From $1,200 pp"
+    },
+    "amalfi_coast": {
+      "title": "Amalfi Coast, Italy",
+      "description": "Pastel villages clinging to cliffsides.",
+      "long_description": "The Amalfi Coast is a stunning masterpiece of vertical landscapes and Mediterranean beauty. Pastel-colored villages like Positano and Ravello cling dramatically to cliffs that plunge into the turquoise sea. Spend your days cruising to the glamorous island of Capri, exploring historic villas with panoramic gardens, and savoring fresh seafood at seaside trattorias. It's the epitome of 'la dolce vita'.",
+      "package1_title": "Private Yacht Charter to Capri",
+      "package1_desc": "Sail along the breathtaking coastline, swim in hidden grottos, and explore the chic island of Capri at your leisure.",
+      "package1_price": "From $3,500 pp",
+      "package2_title": "Ravello's Villas & Gardens Tour",
+      "package2_desc": "A private tour of the historic Villa Rufolo and Villa Cimbrone, famous for their enchanting gardens and 'Terrace of Infinity'.",
+      "package2_price": "From $900 pp"
+    },
+    "maldives": {
+      "title": "Maldives",
+      "description": "A sanctuary of pristine white sands.",
+      "long_description": "The Maldives is the definitive island paradise, a scattered collection of coral atolls in the heart of the Indian Ocean. Here, life revolves around the sun, sand, and sea. Stay in a luxurious overwater villa with direct lagoon access, dive among vibrant coral reefs teeming with marine life, and rejuvenate your senses at a world-class spa. It is the ultimate escape for peace, privacy, and unparalleled natural beauty.",
+      "package1_title": "Manta Ray & Whale Shark Expedition",
+      "package1_desc": "A private guided snorkeling or diving trip to a UNESCO Biosphere Reserve to swim with these gentle giants of the ocean.",
+      "package1_price": "From $1,800 pp",
+      "package2_title": "Private Sandbank Dinner",
+      "package2_desc": "Be whisked away to a deserted sandbank for an incredibly romantic, torch-lit dinner prepared by a private chef under the stars.",
+      "package2_price": "From $2,200 pp"
+    }
+  },
+  "blog_page": {
+    "title": "From Our Travel Journal",
+    "subtitle": "Dive into our collection of stories, tips, and insights from the world of luxury travel."
+  },
+  "blog_post": {
+    "by": "By",
+    "published_on": "Published on",
+    "back_to_blog": "Back to Travel Journal",
+    "not_found": "Blog post not found."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Have questions? We have answers. Find information about our services and processes below.",
+    "q1": "What makes Cleopatra Holidays different from other travel agencies?",
+    "a1": "Our core difference lies in our commitment to bespoke, luxury experiences. We don't offer packages; we craft unique, personalized journeys. Our global connections provide exclusive access to events, properties, and experiences unavailable to the general public.",
+    "q2": "How do you start planning a trip?",
+    "a2": "Every journey begins with a conversation. We get to know your travel style, preferences, and dreams. From there, our experts design a preliminary itinerary, which we refine together until it's perfect.",
+    "q3": "Can you accommodate special requests or dietary restrictions?",
+    "a3": "Absolutely. We pride ourselves on our attention to detail. Whether it's arranging a private chef, securing a rare vintage wine, or managing complex dietary needs, we ensure every aspect of your trip is tailored to you.",
+    "q4": "What is the typical budget for a trip with you?",
+    "a4": "As every trip is entirely bespoke, there is no 'typical' budget. Costs vary widely depending on the destination, duration, level of accommodation, and exclusivity of experiences. We provide a detailed, transparent quote after our initial consultation.",
+    "q5": "Do you offer travel insurance?",
+    "a5": "Yes, we offer comprehensive travel insurance to ensure your peace of mind. We strongly recommend it for all our clients to cover unforeseen circumstances. We can discuss the best options for your specific itinerary."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Let us design your next unforgettable journey. Fill out the form below or contact us directly.",
+    "form_name": "Full Name",
+    "form_email": "Email Address",
+    "form_message": "Your Message",
+    "form_submit": "Send Inquiry",
+    "success_message": "Thank you for your inquiry! We will be in touch shortly.",
+    "error_message": "Something went wrong. Please try again.",
+    "info_title": "Contact Information",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp"
+  },
+  "modal": {
+    "inquire_title": "Inquire About This Destination",
+    "price": "Price per person",
+    "call_us": "Call Us",
+    "whatsapp_us": "Message on WhatsApp",
+    "close": "Close",
+    "inquire_now": "Inquire Now"
+  },
+  "footer": {
+    "rights": "All Rights Reserved.",
+    "follow_us": "Follow Us"
+  },
+  "admin": {
+    "login": {
+      "title": "Admin Access",
+      "subtitle": "Please enter your password to continue.",
+      "password": "Password",
+      "button": "Login",
+      "error": "Invalid password. Please try again."
+    },
+    "sidebar": {
+      "dashboard": "Dashboard",
+      "messages": "Messages",
+      "logout": "Logout"
+    },
+    "dashboard": {
+      "title": "Dashboard Overview",
+      "loading": "Loading stats...",
+      "total_views": "Total Page Views",
+      "total_views_desc": "All pages visited across the site.",
+      "total_messages": "Total Messages",
+      "total_messages_desc": "Inquiries from the contact form."
+    },
+    "messages": {
+      "title": "Contact Inquiries",
+      "loading": "Loading messages...",
+      "fetch_error": "Failed to load messages. Please try again later.",
+      "no_messages": "No messages have been received yet.",
+      "date": "Date",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message"
+    }
+  }
+}

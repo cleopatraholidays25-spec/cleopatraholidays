@@ -1,17 +1,15 @@
 import React, { createContext, useState, useEffect, ReactNode, useCallback } from 'react';
 import { Language } from '../types';
 
+// Import translation files directly for immediate availability
+import enTranslations from '../data/en.json';
+import arTranslations from '../data/ar.json';
+
 interface I18nContextProps {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: (key: string) => string;
 }
-
-// Default empty translations, to avoid errors before fetch completes
-const defaultTranslations = {
-  [Language.EN]: {},
-  [Language.AR]: {}
-};
 
 export const I18nContext = createContext<I18nContextProps | undefined>(undefined);
 
@@ -21,27 +19,11 @@ export const I18nProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     return (storedLang as Language) || Language.EN;
   });
 
-  const [translations, setTranslations] = useState(defaultTranslations);
-
-  useEffect(() => {
-    const fetchTranslations = async () => {
-      try {
-        const [enResponse, arResponse] = await Promise.all([
-          fetch('/locales/en.json'),
-          fetch('/locales/ar.json')
-        ]);
-        if (!enResponse.ok || !arResponse.ok) {
-          throw new Error(`Failed to load translation files: ${enResponse.statusText}, ${arResponse.statusText}`);
-        }
-        const enData = await enResponse.json();
-        const arData = await arResponse.json();
-        setTranslations({ [Language.EN]: enData, [Language.AR]: arData });
-      } catch (error) {
-        console.error('Error fetching translations:', error);
-      }
-    };
-    fetchTranslations();
-  }, []);
+  // Initialize translations immediately with imported data
+  const [translations, setTranslations] = useState(() => ({
+    [Language.EN]: enTranslations,
+    [Language.AR]: arTranslations
+  }));
 
   useEffect(() => {
     const root = window.document.documentElement;
