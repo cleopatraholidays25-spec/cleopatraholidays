@@ -5,6 +5,7 @@
     "about": "من نحن",
     "services": "خدماتنا",
     "destinations": "وجهاتنا",
+    "map": "الخريطة",
     "blog": "المدونة",
     "faq": "الأسئلة الشائعة",
     "contact": "اتصل بنا",
@@ -411,6 +412,49 @@
       "name": "الاسم",
       "email": "البريد الإلكتروني",
       "message": "الرسالة"
+    }
+  },
+  "map": {
+    "title": "خريطة الوجهات التفاعلية",
+    "subtitle": "استكشف وجهاتنا الفاخرة حول العالم. انقر على أي علامة لاكتشاف المزيد عن كل موقع.",
+    "filters": "الفلاتر",
+    "reset": "إعادة تعيين",
+    "search": "بحث",
+    "search_placeholder": "ابحث عن الوجهات...",
+    "continent": "القارة",
+    "all_continents": "جميع القارات",
+    "trip_type": "نوع الرحلة",
+    "budget": "نطاق الميزانية",
+    "all_budgets": "جميع الميزانيات",
+    "price_range": "نطاق السعر",
+    "showing": "عرض",
+    "destinations": "وجهة",
+    "no_results": "لا توجد وجهات تطابق الفلاتر الخاصة بك",
+    "reset_filters": "إعادة تعيين الفلاتر",
+    "view_more": "عرض المزيد",
+    "highlights": "أبرز المعالم",
+    "nights": "ليالي",
+    "continents": {
+      "africa": "أفريقيا",
+      "asia": "آسيا",
+      "europe": "أوروبا",
+      "north_america": "أمريكا الشمالية",
+      "oceania": "أوقيانوسيا"
+    },
+    "trip_types": {
+      "beach": "شاطئ",
+      "mountain": "جبل",
+      "city": "مدينة",
+      "cultural": "ثقافي",
+      "adventure": "مغامرة",
+      "romantic": "رومانسي",
+      "luxury": "فاخر"
+    },
+    "budgets": {
+      "budget": "اقتصادي",
+      "moderate": "متوسط",
+      "luxury": "فاخر",
+      "ultra_luxury": "فاخر جداً"
     }
   }
 }

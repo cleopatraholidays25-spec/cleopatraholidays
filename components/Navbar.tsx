@@ -45,6 +45,7 @@ const Navbar: React.FC = () => {
             <li><NavLink to="/about-us" className={navLinkClasses}>{t('navbar.about')}</NavLink></li>
             <li><NavLink to="/services" className={navLinkClasses}>{t('navbar.services')}</NavLink></li>
             <li><NavLink to="/destinations" className={navLinkClasses}>{t('navbar.destinations')}</NavLink></li>
+            <li><NavLink to="/map" className={navLinkClasses}>{t('navbar.map')}</NavLink></li>
             <li><NavLink to="/contact-us" className={navLinkClasses}>{t('navbar.contact')}</NavLink></li>
           </ul>
           
@@ -129,6 +130,15 @@ const Navbar: React.FC = () => {
                   onClick={toggleMobileMenu}
                 >
                   {t('navbar.destinations')}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink 
+                  to="/map" 
+                  className={({ isActive }) => `block py-3 text-lg font-medium transition-colors duration-300 ${isActive ? 'text-gold' : 'text-navy dark:text-gray-200 hover:text-gold dark:hover:text-gold'}`}
+                  onClick={toggleMobileMenu}
+                >
+                  {t('navbar.map')}
                 </NavLink>
               </li>
               <li>

@@ -5,6 +5,7 @@
     "about": "About Us",
     "services": "Services",
     "destinations": "Destinations",
+    "map": "Map",
     "blog": "Blog",
     "faq": "FAQ",
     "contact": "Contact",
@@ -411,6 +412,49 @@
       "name": "Name",
       "email": "Email",
       "message": "Message"
+    }
+  },
+  "map": {
+    "title": "Interactive Destination Map",
+    "subtitle": "Explore our luxury destinations around the world. Click on any marker to discover more about each location.",
+    "filters": "Filters",
+    "reset": "Reset",
+    "search": "Search",
+    "search_placeholder": "Search destinations...",
+    "continent": "Continent",
+    "all_continents": "All Continents",
+    "trip_type": "Trip Type",
+    "budget": "Budget Range",
+    "all_budgets": "All Budgets",
+    "price_range": "Price Range",
+    "showing": "Showing",
+    "destinations": "destinations",
+    "no_results": "No destinations match your filters",
+    "reset_filters": "Reset Filters",
+    "view_more": "View More",
+    "highlights": "Highlights",
+    "nights": "Nights",
+    "continents": {
+      "africa": "Africa",
+      "asia": "Asia",
+      "europe": "Europe",
+      "north_america": "North America",
+      "oceania": "Oceania"
+    },
+    "trip_types": {
+      "beach": "Beach",
+      "mountain": "Mountain",
+      "city": "City",
+      "cultural": "Cultural",
+      "adventure": "Adventure",
+      "romantic": "Romantic",
+      "luxury": "Luxury"
+    },
+    "budgets": {
+      "budget": "Budget",
+      "moderate": "Moderate",
+      "luxury": "Luxury",
+      "ultra_luxury": "Ultra Luxury"
     }
   }
 }

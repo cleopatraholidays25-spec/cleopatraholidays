@@ -18,6 +18,7 @@ import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
 import FaqPage from './pages/FaqPage';
 import DestinationsPage from './pages/DestinationsPage';
+import InteractiveMapPage from './pages/InteractiveMapPage';
 
 // Admin Pages
 import LoginPage from './pages/admin/LoginPage';
@@ -73,6 +74,7 @@ const App: React.FC = () => {
                 <Route path="/about-us" element={<AboutPage />} />
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/destinations" element={<DestinationsPage />} />
+                <Route path="/map" element={<InteractiveMapPage />} />
                 <Route path="/faq" element={<FaqPage />} />
                 <Route path="/contact-us" element={<ContactPage />} />
               </Route>
