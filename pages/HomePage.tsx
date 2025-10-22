@@ -11,10 +11,13 @@ import InsuranceIcon from '../components/icons/InsuranceIcon';
 import LicenseIcon from '../components/icons/LicenseIcon';
 import CarIcon from '../components/icons/CarIcon';
 import TransferIcon from '../components/icons/TransferIcon';
+import FlightSearch from '@/components/FlightSearch';
+import VisaIcon from '../components/icons/VisaIcon';
 
 const allServices: { [key: string]: React.ReactElement } = {
     flights: <AirplaneIcon />,
     hotels: <HotelIcon />,
+    visa: <VisaIcon />,
     travel_insurance: <InsuranceIcon />,
     driving_license: <LicenseIcon />,
     car_rental: <CarIcon />,
@@ -73,6 +76,7 @@ const HomePage: React.FC = () => {
 
   const headingFont = language === 'ar' ? 'font-serif-ar' : 'font-serif-en';
   const bodyFont = language === 'ar' ? 'font-sans-ar' : 'font-sans-en';
+  const handwritingFont = language === 'ar' ? headingFont : 'font-handwriting-en';
 
   const allServiceKeys = Object.keys(allServices);
 
@@ -85,7 +89,7 @@ const HomePage: React.FC = () => {
   return (
     <>
       <div
-        className="relative h-[calc(100vh-80px)] flex items-start justify-center text-white overflow-hidden bg-navy pt-20 md:pt-32"
+        className="relative h-[calc(90vh-80px)] flex items-start justify-center text-white overflow-hidden bg-navy pt-20 md:pt-32"
       >
         {/*<div
         className="relative h-[calc(100vh-80px)] flex items-center justify-center text-white overflow-hidden bg-navy"
@@ -103,14 +107,17 @@ const HomePage: React.FC = () => {
             ))}
         </div>
         
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+
+        {/* Arabic Pattern Overlay */}
+        <div className="absolute inset-0 arabic-pattern opacity-25"></div>
         <div className={`relative z-10 text-center p-6 ${bodyFont}`}>
           <h1
             className={`text-4xl md:text-6xl font-bold mb-4 ${headingFont} transition-all duration-1000 ease-out flex flex-col ${isHeroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             style={{ transitionDelay: '100ms' }}
           >
             <span style={{textShadow: '2px 2px 0px #000000, -2px -2px 0px #000000, 2px -2px 0px #000000, -2px 2px 0px #000000'}}>{t('hero.tagline1')}</span>
-            <span style={{textShadow: '2px 2px 0px #000000, -2px -2px 0px #000000, 2px -2px 0px #000000, -2px 2px 0px #000000'}}>{t('hero.tagline2')}</span>
+            <span className={`${handwritingFont} mt-4`} style={{textShadow: '2px 2px 0px #000000, -2px -2px 0px #000000, 2px -2px 0px #000000, -2px 2px 0px #000000'}}>{t('hero.tagline2')}</span>
           </h1>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
             <Link
@@ -127,6 +134,16 @@ const HomePage: React.FC = () => {
             >
               {t('hero.learn_more_cta')}
             </Link>
+          </div>
+          
+        </div>
+            </div> {/* End of hero section */}
+
+      {/* Flight Search Section - Between Hero and Services */}
+      <div className="relative z-20 -mt-16 md:-mt-20">
+        <div className="container mx-auto px-4">
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl overflow-hidden outline outline-1 dark:outline-gray-700 outline-gray-300">
+            <FlightSearch />
           </div>
         </div>
       </div>

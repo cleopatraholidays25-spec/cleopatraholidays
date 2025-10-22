@@ -8,7 +8,7 @@
     "map": "Map",
     "blog": "Blog",
     "faq": "FAQ",
-    "contact": "Contact",
+    "contact": "Contact Us",
     "quick_links": "Quick Links"
   },
   "hero": {
@@ -50,28 +50,40 @@
     "explore_all": "Explore All Services",
     "flights": {
       "title": "Flights",
-      "desc": "Seamless booking for commercial first-class and business-class travel."
+      "desc": "Seamless booking for commercial first-class and business-class travel.",
+      "stats": "Global Coverage"
     },
     "hotels": {
       "title": "Hotels & Resorts",
-      "desc": "Handpicked selection of the world's most luxurious accommodations."
+      "desc": "Handpicked selection of the world's most luxurious accommodations.",
+      "stats": "Global Coverage"
     },
     "travel_insurance": {
       "title": "Travel Insurance",
-      "desc": "Comprehensive coverage for peace of mind throughout your journey."
+      "desc": "Comprehensive coverage for peace of mind throughout your journey.",
+      "stats": "Global Coverage"
     },
     "driving_license": {
       "title": "International Driving License",
-      "desc": "Assistance with all the necessary documentation for driving abroad."
+      "desc": "Assistance with all the necessary documentation for driving abroad.",
+      "stats": "Global Coverage"
     },
     "car_rental": {
       "title": "Car Rental",
-      "desc": "Access to a fleet of vehicles for your travel needs."
+      "desc": "Access to a fleet of vehicles for your travel needs.",
+      "stats": "Local Coverage"
     },
     "transfers": {
       "title": "Airport Transfers",
-      "desc": "Reliable and luxurious pickup and drop-off services."
+      "desc": "Reliable and luxurious pickup and drop-off services.",
+      "stats": "Global Coverage"
+    },
+    "visa": {
+      "title": "Visa Services",
+      "desc": "Expert assistance with visa applications and processing.",
+      "stats": "50+ Countries"
     }
+    
   },
   "destinations_page": {
     "title": "Our Curated Destinations",
@@ -456,5 +468,28 @@
       "luxury": "Luxury",
       "ultra_luxury": "Ultra Luxury"
     }
+  },
+  "flight_search": {
+    "round_trip": "Round Trip",
+    "one_way": "One Way",
+    "from": "From",
+    "to": "To",
+    "departure": "Departure",
+    "return": "Return",
+    "passengers": "Passengers",
+    "passenger": "passenger | passengers",
+    "adults": "Adults",
+    "children": "Children",
+    "infants": "Infants",
+    "years": "years",
+    "months": "months",
+    "cabin_class": "Cabin Class",
+    "economy": "Economy",
+    "premium_economy": "Premium Economy",
+    "business": "Business",
+    "first_class": "First Class",
+    "search_flights": "Search Flights",
+    "origin_placeholder": "City or Airport",
+    "destination_placeholder": "City or Airport"
   }
 }

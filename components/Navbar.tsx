@@ -42,11 +42,12 @@ const Navbar: React.FC = () => {
           {/* Desktop Navigation */}
           <ul className="hidden md:flex items-center space-x-8 rtl:space-x-reverse">
             <li><NavLink to="/" className={navLinkClasses}>{t('navbar.home')}</NavLink></li>
-            <li><NavLink to="/about-us" className={navLinkClasses}>{t('navbar.about')}</NavLink></li>
             <li><NavLink to="/services" className={navLinkClasses}>{t('navbar.services')}</NavLink></li>
             <li><NavLink to="/destinations" className={navLinkClasses}>{t('navbar.destinations')}</NavLink></li>
             <li><NavLink to="/map" className={navLinkClasses}>{t('navbar.map')}</NavLink></li>
             <li><NavLink to="/contact-us" className={navLinkClasses}>{t('navbar.contact')}</NavLink></li>
+            <li><NavLink to="/about-us" className={navLinkClasses}>{t('navbar.about')}</NavLink></li>
+
           </ul>
           
           {/* Desktop Controls */}

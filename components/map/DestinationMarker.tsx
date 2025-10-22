@@ -51,10 +51,10 @@ const DestinationMarker: React.FC<DestinationMarkerProps> = ({ destination }) =>
 
   return (
     <Marker position={destination.coordinates} icon={customIcon}>
-      <Popup className="destination-popup" maxWidth={300}>
-        <div className="p-2">
+      <Popup className="destination-popup" maxWidth={320}>
+        <div className="p-3 w-80" style={{ height: '240px' }}>
           {/* Image */}
-          <div className="relative h-40 mb-3 rounded-lg overflow-hidden">
+          <div className="relative h-32 mb-3 rounded-lg overflow-hidden shadow-md">
             <img
               src={destination.image}
               alt={destination.name}
@@ -66,37 +66,51 @@ const DestinationMarker: React.FC<DestinationMarkerProps> = ({ destination }) =>
           </div>
 
           {/* Content */}
-          <h3 className="text-lg font-bold text-navy mb-1">{destination.name}</h3>
-          <p className="text-sm text-gray-600 mb-2">{destination.country}</p>
-          
-          <p className="text-sm text-gray-700 mb-3 line-clamp-2">
-            {destination.shortDescription}
-          </p>
+          <div className="mb-2 overflow-y-auto" style={{ maxHeight: 'calc(240px - 11rem)' }}>
+            <div className="flex justify-between items-start gap-2 mb-1">
+              <div>
+                <h3 className="text-lg font-bold text-navy mb-0.5">{destination.name}</h3>
+                <p className="text-sm text-gray-600">{destination.country}</p>
+              </div>
+              <div className="bg-gold text-navy px-2 py-1 rounded-md text-sm font-bold whitespace-nowrap">
+                ${destination.price.toLocaleString()}
+              </div>
+            </div>
+            
+            <p className="text-sm text-gray-700 mt-2 mb-3 line-clamp-2">
+              {destination.shortDescription}
+            </p>
 
-          {/* Trip Types */}
-          <div className="flex flex-wrap gap-1 mb-3">
-            {destination.tripTypes.slice(0, 3).map((type) => (
-              <span
-                key={type}
-                className="text-xs px-2 py-1 rounded-full text-white"
-                style={{ backgroundColor: tripTypeColors[type] }}
-              >
-                {t(`map.trip_types.${type}`)}
-              </span>
-            ))}
-          </div>
-
-          {/* Highlights */}
-          <div className="mb-3">
-            <p className="text-xs font-semibold text-gray-700 mb-1">{t('map.highlights')}:</p>
-            <ul className="text-xs text-gray-600 space-y-1">
-              {destination.highlights.slice(0, 3).map((highlight, index) => (
-                <li key={index} className="flex items-start">
-                  <span className="text-gold mr-1">✓</span>
-                  {highlight}
-                </li>
+            {/* Trip Types */}
+            <div className="flex flex-wrap gap-2 mb-3">
+              {destination.tripTypes.slice(0, 3).map((type) => (
+                <span
+                  key={type}
+                  className="text-xs px-3 py-1 rounded-full text-white font-medium"
+                  style={{ 
+                    backgroundColor: tripTypeColors[type],
+                    boxShadow: '0 1px 3px rgba(0,0,0,0.1)'
+                  }}
+                >
+                  {t(`map.trip_types.${type}`)}
+                </span>
               ))}
-            </ul>
+            </div>
+
+            {/* Highlights */}
+            <div className="bg-gray-50 p-3 rounded-lg">
+              <p className="text-xs font-semibold text-gray-700 mb-2 uppercase tracking-wider">
+                {t('map.highlights')}:
+              </p>
+              <ul className="text-sm text-gray-700 space-y-2">
+                {destination.highlights.slice(0, 3).map((highlight, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-gold mr-2 mt-0.5">•</span>
+                    <span className="flex-1">{highlight}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Details */}
@@ -108,9 +122,9 @@ const DestinationMarker: React.FC<DestinationMarkerProps> = ({ destination }) =>
           {/* View More Button */}
           <button
             onClick={handleViewMore}
-            className="w-full bg-navy hover:bg-gold text-white hover:text-navy py-2 px-4 rounded-md transition-colors duration-300 text-sm font-semibold"
+            className="w-full bg-gold hover:bg-opacity-90 text-navy font-semibold py-2.5 px-4 rounded-md transition-all duration-200 text-sm shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
           >
-            {t('map.view_more')}
+            {t('map.view_more')} →
           </button>
         </div>
       </Popup>
