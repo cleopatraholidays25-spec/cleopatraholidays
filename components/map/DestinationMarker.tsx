@@ -2,15 +2,14 @@ import React from 'react';
 import { Marker, Popup } from 'react-leaflet';
 import { Icon, DivIcon } from 'leaflet';
 import { MapDestination, tripTypeColors } from '../../data/mapDestinationsData';
-import { useNavigate } from 'react-router-dom';
 import { useI18n } from '../../hooks/useI18n';
 
 interface DestinationMarkerProps {
   destination: MapDestination;
+  onViewMore: (destination: MapDestination) => void;
 }
 
-const DestinationMarker: React.FC<DestinationMarkerProps> = ({ destination }) => {
-  const navigate = useNavigate();
+const DestinationMarker: React.FC<DestinationMarkerProps> = ({ destination, onViewMore }) => {
   const { t } = useI18n();
 
   // Create custom marker icon based on trip type
@@ -45,8 +44,10 @@ const DestinationMarker: React.FC<DestinationMarkerProps> = ({ destination }) =>
     popupAnchor: [0, -32]
   });
 
-  const handleViewMore = () => {
-    navigate(`/destinations#${destination.slug}`);
+  const handleViewMore = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    onViewMore(destination);
   };
 
   return (

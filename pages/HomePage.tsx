@@ -119,7 +119,7 @@ const HomePage: React.FC = () => {
             <span style={{textShadow: '2px 2px 0px #000000, -2px -2px 0px #000000, 2px -2px 0px #000000, -2px 2px 0px #000000'}}>{t('hero.tagline1')}</span>
             <span className={`${handwritingFont} mt-4`} style={{textShadow: '2px 2px 0px #000000, -2px -2px 0px #000000, 2px -2px 0px #000000, -2px 2px 0px #000000'}}>{t('hero.tagline2')}</span>
           </h1>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
             <Link
               to="/contact-us"
               className={`px-8 py-3 bg-gold text-navy font-bold rounded-md shadow-lg transform transition-all duration-700 ease-out hover:scale-105 hover:bg-yellow-500 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-75 ${isHeroLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}

@@ -8,10 +8,12 @@ import LicenseIcon from '../components/icons/LicenseIcon';
 import CarIcon from '../components/icons/CarIcon';
 import TransferIcon from '../components/icons/TransferIcon';
 import VisaIcon from '../components/icons/VisaIcon';
+import CruiseIcon from '../components/icons/CruiseIcon';
 
 interface ServiceData {
     icon: React.ReactElement;
     stats: string;
+    isSpecial?: boolean;
 }
 
 const serviceData: { [key: string]: ServiceData } = {
@@ -42,8 +44,30 @@ const serviceData: { [key: string]: ServiceData } = {
     transfers: {
         icon: <TransferIcon />,
         stats: 'Global Coverage'
+    },
+    cruises: {
+        icon: <CruiseIcon />,
+        stats: 'Global Coverage'
+    },
+    more: {
+        icon: (
+            <svg 
+                className="w-12 h-12" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+            >
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+        ),
+        stats: 'And More',
+        isSpecial: true
     }
-   
+    
 };
 
 const ServicesPage: React.FC = () => {
@@ -74,12 +98,24 @@ const ServicesPage: React.FC = () => {
                                 key={key}
                                 className={isSingleCard ? "sm:col-start-2 lg:col-start-2" : ""}
                             >
-                                <ServiceCard
-                                    icon={service.icon}
-                                    title={t(`services.${key}.title`)}
-                                    description={t(`services.${key}.desc`)}
-                                    stats={t(`services.${key}.stats`, { defaultValue: service.stats })}
-                                />
+                                {key === 'more' ? (
+                                    <a href="/contact-us" className="block h-full">
+                                        <ServiceCard
+                                            icon={service.icon}
+                                            title={t(`services.${key}.title`)}
+                                            description={t(`services.${key}.desc`)}
+                                            stats={t(`services.${key}.stats`, { defaultValue: service.stats })}
+                                            className="h-full transition-transform hover:scale-105 hover:shadow-lg"
+                                        />
+                                    </a>
+                                ) : (
+                                    <ServiceCard
+                                        icon={service.icon}
+                                        title={t(`services.${key}.title`)}
+                                        description={t(`services.${key}.desc`)}
+                                        stats={t(`services.${key}.stats`, { defaultValue: service.stats })}
+                                    />
+                                )}
                             </div>
                         );
                     })}
