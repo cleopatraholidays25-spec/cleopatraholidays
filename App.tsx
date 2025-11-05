@@ -16,7 +16,6 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
-import FaqPage from './pages/FaqPage';
 import DestinationsPage from './pages/DestinationsPage';
 import InteractiveMapPage from './pages/InteractiveMapPage';
 
@@ -75,7 +74,6 @@ const App: React.FC = () => {
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/destinations" element={<DestinationsPage />} />
                 <Route path="/map" element={<InteractiveMapPage />} />
-                <Route path="/faq" element={<FaqPage />} />
                 <Route path="/contact-us" element={<ContactPage />} />
               </Route>
 

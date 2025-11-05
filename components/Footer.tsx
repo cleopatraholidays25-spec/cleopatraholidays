@@ -22,7 +22,6 @@ const Footer: React.FC = () => {
                         <li><Link to="/about-us" className="text-gray-400 hover:text-gold transition-colors">{t('navbar.about')}</Link></li>
                         <li><Link to="/services" className="text-gray-400 hover:text-gold transition-colors">{t('navbar.services')}</Link></li>
                         <li><Link to="/destinations" className="text-gray-400 hover:text-gold transition-colors">{t('navbar.destinations')}</Link></li>
-                        <li><Link to="/faq" className="text-gray-400 hover:text-gold transition-colors">{t('navbar.faq')}</Link></li>
                         <li><Link to="/contact-us" className="text-gray-400 hover:text-gold transition-colors">{t('navbar.contact')}</Link></li>
                     </ul>
                 </div>
@@ -31,9 +30,10 @@ const Footer: React.FC = () => {
                     <address className="not-italic text-gray-400">
                         <p>192 Street 305</p>
                         <p>Lusail, Qatar</p>
-                        <p className="mt-2">+974 55540596</p>
-                        <p>info@cleopatraholidays.com</p>
-                    </address>
+                        <p><a href="tel:+97450505033" className="hover:text-gold">{t('contact.phone22')}</a></p> 
+                        <p><a href="tel:+97455540596" className="hover:text-gold">{t('contact.phone11')}</a></p> 
+                        <p><a href="mailto:contact@cleopatraholidays.com" className="hover:text-gold">{t('contact.email')}</a></p>
+                        </address>
                 </div>
                 <div>
                     <h4 className="text-lg font-bold mb-4">{t('footer.follow_us')}</h4>

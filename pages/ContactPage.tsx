@@ -99,10 +99,10 @@ const ContactPage: React.FC = () => {
                     >
                         <div>
                             <h3 className={`text-2xl font-bold text-gold mb-4 ${headingFont}`}>{t('contact.info_title')}</h3>
-                            <p className="text-gray-700 dark:text-gray-300"><strong>{t('contact.phone')}:</strong> <a href="tel:+97455540596" className="hover:text-gold">+974-5554 0596</a></p>
-                            <p className="text-gray-700 dark:text-gray-300"><strong>{t('contact.phone')}:</strong> <a href="tel:+97450505033" className="hover:text-gold">+974-5050 5033</a></p>
-                            <p className="text-gray-700 dark:text-gray-300"><strong>Email:</strong> <a href="mailto:contact@cleopatraholidays.com" className="hover:text-gold">contact@cleopatraholidays    .com</a></p>
-                            <p className="text-gray-700 dark:text-gray-300"><strong>{t('contact.whatsapp')}:</strong> <a href="https://wa.me/97450505033" target="_blank" rel="noopener noreferrer" className="hover:text-gold">+974-5050 5033</a></p>
+                            <p className="text-gray-700 dark:text-gray-300"><strong>{t('contact.phone')}:</strong> <a href="tel:+97450505033" className="hover:text-gold">{t('contact.phone2')}</a></p>
+                            <p className="text-gray-700 dark:text-gray-300"><strong>{t('contact.phone')}:</strong> <a href="tel:+97455540596" className="hover:text-gold">{t('contact.phone1')}</a></p>
+                            <p className="text-gray-700 dark:text-gray-300"><strong>Email:</strong> <a href="mailto:contact@cleopatraholidays.com" className="hover:text-gold">{t('contact.email')}</a></p>
+                            <p className="text-gray-700 dark:text-gray-300"><strong>{t('contact.whatsapp')}:</strong> <a href="https://wa.me/97450505033" target="_blank" rel="noopener noreferrer" className="hover:text-gold">{t('contact.phone2')}</a></p>
                         </div>
                         <div className="h-80 w-full rounded-lg overflow-hidden shadow-lg">
                             <iframe

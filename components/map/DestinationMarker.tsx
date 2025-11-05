@@ -1,15 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Marker, Popup } from 'react-leaflet';
-import { Icon, DivIcon } from 'leaflet';
-import { MapDestination, tripTypeColors } from '../../data/mapDestinationsData';
+import L, { DivIcon } from 'leaflet';
 import { useI18n } from '../../hooks/useI18n';
+import { MapDestination } from '../../data/mapDestinationsData';
+import { useNavigate } from 'react-router-dom';
+import DestinationModal from '../DestinationModal';
+
+// Define trip type colors
+const tripTypeColors: Record<string, string> = {
+  beach: '#FFC107',
+  adventure: '#4CAF50',
+  cultural: '#9C27B0',
+  luxury: '#2196F3',
+  family: '#FF5722',
+  default: '#607D8B'
+};
 
 interface DestinationMarkerProps {
   destination: MapDestination;
-  onViewMore: (destination: MapDestination) => void;
 }
 
-const DestinationMarker: React.FC<DestinationMarkerProps> = ({ destination, onViewMore }) => {
+const DestinationMarker: React.FC<DestinationMarkerProps> = ({ destination }) => {
+  const navigate = useNavigate();
   const { t } = useI18n();
 
   // Create custom marker icon based on trip type
@@ -44,10 +56,15 @@ const DestinationMarker: React.FC<DestinationMarkerProps> = ({ destination, onVi
     popupAnchor: [0, -32]
   });
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const handleViewMore = (e: React.MouseEvent) => {
-    e.preventDefault();
     e.stopPropagation();
-    onViewMore(destination);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -129,6 +146,36 @@ const DestinationMarker: React.FC<DestinationMarkerProps> = ({ destination, onVi
           </button>
         </div>
       </Popup>
+
+      {/* Destination Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4">
+          <div className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto">
+            <button
+              onClick={handleCloseModal}
+              className="absolute top-4 right-4 z-10 p-2 bg-white dark:bg-gray-800 rounded-full shadow-lg text-navy dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              aria-label="Close modal"
+            >
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <DestinationModal
+              isOpen={isModalOpen}
+              onClose={handleCloseModal}
+              destination={{
+                ...destination,
+                // Ensure all required fields are present
+                categories: destination.tripTypes || [],
+                included: [],
+                galleryImages: [destination.image],
+                price: 0,
+                nights: destination.nights || 7
+              }}
+            />
+          </div>
+        </div>
+      )}
     </Marker>
   );
 };
