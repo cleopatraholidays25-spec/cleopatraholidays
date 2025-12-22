@@ -5,6 +5,8 @@ import { useI18n } from '../../hooks/useI18n';
 import { MapDestination } from '../../data/mapDestinationsData';
 import { useNavigate } from 'react-router-dom';
 import DestinationModal from '../DestinationModal';
+import PhoneIcon from '../icons/PhoneIcon';
+import WhatsAppIcon from '../icons/WhatsAppIcon';
 
 // Define trip type colors
 const tripTypeColors: Record<string, string> = {
@@ -78,9 +80,6 @@ const DestinationMarker: React.FC<DestinationMarkerProps> = ({ destination }) =>
               alt={destination.name}
               className="w-full h-full object-cover"
             />
-            <div className="absolute top-2 right-2 bg-gold text-navy px-2 py-1 rounded-md text-xs font-bold">
-              ${destination.price.toLocaleString()}
-            </div>
           </div>
 
           {/* Content */}
@@ -90,14 +89,33 @@ const DestinationMarker: React.FC<DestinationMarkerProps> = ({ destination }) =>
                 <h3 className="text-lg font-bold text-navy mb-0.5">{destination.name}</h3>
                 <p className="text-sm text-gray-600">{destination.country}</p>
               </div>
-              <div className="bg-gold text-navy px-2 py-1 rounded-md text-sm font-bold whitespace-nowrap">
-                ${destination.price.toLocaleString()}
+              <div className="text-sm font-medium text-gold whitespace-nowrap">
+                {t('modal.contact_for_price')}
               </div>
             </div>
             
             <p className="text-sm text-gray-700 mt-2 mb-3 line-clamp-2">
               {destination.shortDescription}
             </p>
+            
+            <div className="flex flex-col space-y-2 mt-3">
+              <a 
+                href="tel:+97455540596" 
+                className="flex items-center justify-center w-full px-4 py-2 bg-gray-200 dark:bg-gray-700 text-navy dark:text-white font-bold rounded-md shadow-md transition-all duration-300 hover:bg-gray-300 dark:hover:bg-gray-600 hover:shadow-lg text-sm"
+              >
+                <PhoneIcon className="w-4 h-4 me-2" />
+                {t('modal.call_us')}
+              </a>
+              <a 
+                href="https://wa.me/97455540596" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-full px-4 py-2 bg-green-500 text-white font-bold rounded-md shadow-md transition-all duration-300 hover:bg-green-600 hover:shadow-lg text-sm"
+              >
+                <WhatsAppIcon className="w-4 h-4 me-2" />
+                {t('modal.whatsapp_us')}
+              </a>
+            </div>
 
             {/* Trip Types */}
             <div className="flex flex-wrap gap-2 mb-3">

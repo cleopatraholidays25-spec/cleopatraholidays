@@ -195,28 +195,25 @@ const DestinationsPage: React.FC = () => {
                         </div>
 
                         <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
-                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-                                 <div>
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">{t('modal.price')}</p>
-                                    <p className="text-3xl font-bold text-gold">QAR {selectedDestination.price.toLocaleString()}</p>
-                                </div>
-                                 <div className="flex flex-col space-y-2">
-                                     <a 
-                                        href="tel:+97455540596" 
-                                        className="flex items-center justify-center w-full px-4 py-2 bg-gray-200 dark:bg-gray-700 text-navy dark:text-white font-bold rounded-md shadow-md transition-all duration-300 hover:bg-gray-300 dark:hover:bg-gray-600 hover:shadow-lg text-sm"
-                                    >
-                                        <PhoneIcon className="w-4 h-4 me-2" />
-                                        {t('modal.call_us')}
-                                    </a>
-                                    <a 
-                                        href="https://wa.me/97455540596" 
-                                        target="_blank" rel="noopener noreferrer" 
-                                        className="flex items-center justify-center w-full px-4 py-2 bg-green-500 text-white font-bold rounded-md shadow-md transition-all duration-300 hover:bg-green-600 hover:shadow-lg text-sm"
-                                    >
-                                        <WhatsAppIcon className="w-4 h-4 me-2" />
-                                        {t('modal.whatsapp_us')}
-                                    </a>
-                                </div>
+                            <div className="text-center mb-6">
+                                <p className="text-xl font-bold text-gold">{t('modal.contact_for_price')}</p>
+                            </div>
+                            <div className="flex flex-col space-y-2 max-w-md mx-auto">
+                                <a 
+                                    href="tel:+97455540596" 
+                                    className="flex items-center justify-center w-full px-4 py-2 bg-gray-200 dark:bg-gray-700 text-navy dark:text-white font-bold rounded-md shadow-md transition-all duration-300 hover:bg-gray-300 dark:hover:bg-gray-600 hover:shadow-lg text-sm"
+                                >
+                                    <PhoneIcon className="w-4 h-4 me-2" />
+                                    {t('modal.call_us')}
+                                </a>
+                                <a 
+                                    href="https://wa.me/97455540596" 
+                                    target="_blank" rel="noopener noreferrer" 
+                                    className="flex items-center justify-center w-full px-4 py-2 bg-green-500 text-white font-bold rounded-md shadow-md transition-all duration-300 hover:bg-green-600 hover:shadow-lg text-sm"
+                                >
+                                    <WhatsAppIcon className="w-4 h-4 me-2" />
+                                    {t('modal.whatsapp_us')}
+                                </a>
                             </div>
                         </div>
                     </div>

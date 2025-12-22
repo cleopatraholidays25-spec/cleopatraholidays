@@ -12,7 +12,6 @@ import WhatsAppIcon from '../components/icons/WhatsAppIcon';
 
 interface SelectedPackage {
     title: string;
-    price: string;
 }
 
 const DestinationDetailPage: React.FC = () => {
@@ -59,8 +58,7 @@ const DestinationDetailPage: React.FC = () => {
 
     const handleInquire = (packageIndex: number) => {
         setSelectedPackage({
-          title: t(`destinations_page.${destination.slug}.package${packageIndex}_title`),
-          price: t(`destinations_page.${destination.slug}.package${packageIndex}_price`),
+          title: t(`destinations_page.${destination.slug}.package${packageIndex}_title`)
         });
         setIsModalOpen(true);
     };
@@ -103,11 +101,16 @@ const DestinationDetailPage: React.FC = () => {
                                     className={`transition-all duration-500 ease-out ${isPackagesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                                     style={{ transitionDelay: `${100 + i * 150}ms` }}
                                     >
+                                    <button
+                                        onClick={() => handleInquire(i)}
+                                        className="w-full px-6 py-2 bg-gold text-navy font-bold rounded-md shadow-md transition-all duration-300 hover:bg-yellow-500 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-75"
+                                    >
+                                        {t('modal.contact_agency')}
+                                    </button>
                                     <PackageCard 
                                         icon={packageIcons[i-1]}
                                         title={t(`destinations_page.${destination.slug}.package${i}_title`)}
                                         description={t(`destinations_page.${destination.slug}.package${i}_desc`)}
-                                        onInquire={() => handleInquire(i)}
                                     />
                                     </div>
                                 ))}
@@ -150,9 +153,8 @@ const DestinationDetailPage: React.FC = () => {
                 {selectedPackage && (
                     <div className="space-y-6 text-center">
                         <h3 className="text-2xl font-bold text-navy dark:text-white">{selectedPackage.title}</h3>
-                        <div>
-                            <p className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">{t('modal.price')}</p>
-                            <p className="text-3xl font-bold text-gold">{selectedPackage.price}</p>
+                        <div className="mb-4">
+                            <p className="text-lg font-bold text-gold">{t('modal.contact_for_price')}</p>
                         </div>
                         <div className="flex flex-col space-y-3 pt-4">
                             <a 

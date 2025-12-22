@@ -383,6 +383,7 @@
   },
   "modal": {
     "inquire_title": "Inquire About This Destination",
+    "contact_for_price": "Contact us for price",
     "price": "Price per person",
     "call_us": "Call Us",
     "whatsapp_us": "Message on WhatsApp",

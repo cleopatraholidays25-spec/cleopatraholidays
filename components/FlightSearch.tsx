@@ -30,8 +30,72 @@ const FlightSearch: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Searching flights...');
+    
+    // Get form values
+    const form = e.target as HTMLFormElement;
+    const from = (form.querySelector('input[placeholder*="origin"]') as HTMLInputElement)?.value || '';
+    const to = (form.querySelector('input[placeholder*="destination"]') as HTMLInputElement)?.value || '';
+    const departureDate = (form.querySelector('input[type="date"]') as HTMLInputElement)?.value || '';
+    const returnDate = tripType === 'round' ? (form.querySelectorAll('input[type="date"]')[1] as HTMLInputElement)?.value : '';
+    
+    // Format dates for Skyscanner (YYYY-MM-DD)
+    const formatDate = (dateString: string) => {
+      if (!dateString) return '';
+      const date = new Date(dateString);
+      return date.toISOString().split('T')[0];
+    };
+
+    // Create base parameters
+    const params = new URLSearchParams({
+      adults: passengers.adults.toString(),
+      children: passengers.children.toString(),
+      infants: passengers.infants.toString(),
+      cabinclass: cabinClass,
+      locale: 'en-QA',
+      currency: 'QAR',
+      market: 'QA',
+      rt: tripType === 'round' ? '1' : '0'
+    });
+
+    // Set the base URL
+    let destinationUrl = 'https://www.skyscanner.qa/transport/flights/';
+    
+    // If both origin and destination are provided, use the direct search URL
+    if (from && to) {
+      destinationUrl += `${encodeURIComponent(from)}/${encodeURIComponent(to)}/`;
+      
+      if (departureDate) {
+        destinationUrl += `${formatDate(departureDate)}`;
+        if (returnDate) {
+          destinationUrl += `/${formatDate(returnDate)}`;
+        }
+      }
+      
+      destinationUrl += `/?${params.toString()}`;
+    } else {
+      // If origin or destination is missing, use the homepage with query parameters
+      destinationUrl = 'https://www.skyscanner.qa/transport/flights/from/';
+      
+      if (from) {
+        destinationUrl += `${encodeURIComponent(from)}/`;
+      }
+      
+      if (to) {
+        destinationUrl += `to/${encodeURIComponent(to)}/`;
+      }
+      
+      if (departureDate) {
+        params.append('outboundDate', formatDate(departureDate));
+        if (returnDate) {
+          params.append('returnDate', formatDate(returnDate));
+        }
+      }
+      
+      destinationUrl += `?${params.toString()}`;
+    }
+
+    // Open in a new tab
+    window.open(destinationUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (

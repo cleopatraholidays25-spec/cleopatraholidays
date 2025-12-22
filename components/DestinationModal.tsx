@@ -87,14 +87,10 @@ const DestinationModal: React.FC<DestinationModalProps> = ({ isOpen, onClose, de
         </div>
 
         <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+          <div className="grid grid-cols-1 gap-4 items-center text-center">
             <div>
-              <p className="text-sm text-gray-500 dark:text-gray-400">{t('modal.price')}</p>
-              <p className="text-3xl font-bold text-gold">
-                {fullDestination.price 
-                  ? `QAR ${fullDestination.price.toLocaleString()}` 
-                  : t('modal.contact_for_price')
-                }
+              <p className="text-xl font-bold text-gold mb-4">
+                {t('modal.contact_for_price')}
               </p>
             </div>
             <div className="flex flex-col space-y-2">
